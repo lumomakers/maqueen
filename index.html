@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas con Robot Maqueen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.1);
+            color: #667eea;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .robot-image {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .sections {
+            padding: 3rem 0;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border-top: 4px solid #667eea;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .section-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .section-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .section-card .practices-count {
+            background: #f0f0f0;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .section-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🤖 Prácticas con Robot Maqueen</h1>
+            <p>Aprende robótica educativa paso a paso</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#practicas">Prácticas</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#sobre">Sobre el proyecto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Bienvenido al curso de Maqueen</h2>
+                <p>Descubre el fascinante mundo de la robótica educativa con el robot Maqueen. Este curso te guiará a través de prácticas diseñadas para aprender programación, sensores, motores y mucho más.</p>
+                <div class="robot-image">🚗💡</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sections" id="practicas">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #2c3e50; font-size: 2rem;">Secciones de Prácticas</h2>
+            
+            <div class="section-grid">
+                <div class="section-card" onclick="window.location.href='basicas.html'">
+                    <div class="section-icon">🎯</div>
+                    <h3>Prácticas Básicas</h3>
+                    <p>Primeros pasos con el robot Maqueen. Aprende a controlar los motores, LEDs y sensores básicos.</p>
+                    <span class="practices-count">6 prácticas</span>
+                    <br>
+                    <a href="basicas.html" class="btn">Ver prácticas</a>
+                </div>
+
+                <div class="section-card" onclick="window.location.href='sensores.html'">
+                    <div class="section-icon">📡</div>
+                    <h3>Sensores</h3>
+                    <p>Explora los diferentes sensores del Maqueen: línea, ultrasonidos, y aprende a procesarlos.</p>
+                    <span class="practices-count">5 prácticas</span>
+                    <br>
+                    <a href="sensores.html" class="btn">Ver prácticas</a>
+                </div>
+
+                <div class="section-card" onclick="window.location.href='movimiento.html'">
+                    <div class="section-icon">🏎️</div>
+                    <h3>Control de Movimiento</h3>
+                    <p>Domina el control de los motores para crear movimientos precisos y algoritmos de navegación.</p>
+                    <span class="practices-count">7 prácticas</span>
+                    <br>
+                    <a href="movimiento.html" class="btn">Ver prácticas</a>
+                </div>
+
+                <div class="section-card" onclick="window.location.href='avanzadas.html'">
+                    <div class="section-icon">🚀</div>
+                    <h3>Prácticas Avanzadas</h3>
+                    <p>Proyectos complejos que integran múltiples sensores y actuadores para retos completos.</p>
+                    <span class="practices-count">4 prácticas</span>
+                    <br>
+                    <a href="avanzadas.html" class="btn">Ver prácticas</a>
+                </div>
+
+                <div class="section-card" onclick="window.location.href='proyectos.html'">
+                    <div class="section-icon">⭐</div>
+                    <h3>Proyectos Finales</h3>
+                    <p>Pon a prueba todo lo aprendido con proyectos integradores y competiciones.</p>
+                    <span class="practices-count">3 proyectos</span>
+                    <br>
+                    <a href="proyectos.html" class="btn">Ver proyectos</a>
+                </div>
+
+                <div class="section-card" onclick="window.location.href='recursos.html'">
+                    <div class="section-icon">📚</div>
+                    <h3>Recursos Adicionales</h3>
+                    <p>Documentación, guías de referencia, enlaces útiles y material complementario.</p>
+                    <span class="practices-count">Biblioteca completa</span>
+                    <br>
+                    <a href="recursos.html" class="btn">Ver recursos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #f8f9fa; padding: 3rem 0;" id="sobre">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #2c3e50;">Sobre el Proyecto</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p style="margin-bottom: 1rem;">Este proyecto educativo está diseñado para introducir a estudiantes en el mundo de la robótica utilizando el robot Maqueen, una plataforma versátil basada en micro:bit.</p>
+                <p style="margin-bottom: 1rem;">Las prácticas están organizadas de forma progresiva, desde conceptos básicos hasta proyectos complejos, permitiendo un aprendizaje gradual y efectivo.</p>
+                <p>Cada sección incluye explicaciones detalladas, código de ejemplo y retos para poner en práctica lo aprendido.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Prácticas con Robot Maqueen | Material educativo libre</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
