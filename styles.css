@@ -46,7 +46,7 @@ body{
       0 0 22px rgba(55,215,237,.35),
       0 0 40px rgba(38,175,212,.25);
 }
-
+/*
 .footer {
   position: fixed;
   bottom: 0;
@@ -59,6 +59,35 @@ body{
   line-height: 10px;
   z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
+*/
+
+/* Nuevo footer */
+.footer{
+  padding: 16px 20px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centra todo */
+  gap: 12px;
+  flex-wrap: wrap;         /* si no cabe, baja de línea */
+  text-align: center;
+}
+
+.footer-logo{
+  height: 36px;  /* ajusta tamaño del logo */
+  width: auto;
+  display: block;
+}
+
+.footer-texto{
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+/* Fin nuevo footer */
 
 .wrap{
   max-width: 1100px;
@@ -76,9 +105,12 @@ header{
 
 .img_banner{
   margin:0;
-  /*position: fixed;*/
+  position: absolute;
+  right: 20px;
+  top: 5%;
+  /*transform: translateY(-50%);*/
   width:auto;
-  height:400px;
+  height:100px;
 
 }
 
