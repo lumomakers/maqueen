@@ -151,7 +151,7 @@ header{
 }
 
 .bottom-actions{
-  display: flex;
+  display: box;
   gap: 10px;
   flex-wrap: wrap;
   justify-items: center;
